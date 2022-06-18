@@ -8,7 +8,7 @@ directory = []
 root = Tk()
 root.geometry('535x355+500+300')
 root.resizable(False, False)
-root.iconbitmap('icon.ico')
+root.iconbitmap('img/icon.ico')
 root.title('File Manager')
 font = ("Tahoma", 12)
 
@@ -82,7 +82,6 @@ button_paste = Button(text='Вставить', padx=10)
 def entry_action(n=None):
     '''Processing the entered path'''
     global PATH
-
     def search(pars):
         found = []
         path = pars[:-pars[::-1].index('/')].replace('/', '')
@@ -118,7 +117,7 @@ def entry_action(n=None):
 
 entry_path.bind('<Return>', entry_action)
 # Button for open entered path
-open_png = PhotoImage(file=os.path.abspath('open.png'))
+open_png = PhotoImage(file=os.path.abspath('img/open.png'))
 button_open = Button(image=open_png, border=0, command=entry_action)
 button_open.place(x=480, y=1)
 
